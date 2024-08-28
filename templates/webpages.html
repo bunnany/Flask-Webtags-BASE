@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML and CSS Tags</title>
+    <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Web Tags</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/webpages">HTML</a>
+            </li>
+            <li>
+                <a href="/styles">CSS</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h2>HTML</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tag in tags %}
+                <tr>
+                    <td>{{ tag[0] }}</td>
+                    <td>{{ tag[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            
+
+        </table>
+    </main>
+    <footer>
+        <p>&copy; D Benseman 2022</p>
+    </footer>
+</body>
+</html>
